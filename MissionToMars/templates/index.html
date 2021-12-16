@@ -1,0 +1,97 @@
+<!--
+  index.html
+  A demonstration of using Bootstrap, Flask, and Render_template to display information scraped from the web.
+  This is the template file used by app.py.
+  
+  written by:  Ricardo G. Mora, Jr.
+  last updated:  12/15/2021
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <div class="jumbotron text-center"> <!-- Start of top panel-->
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Latest Data!</a></p>
+      <p>Last Updated: &nbsp;&nbsp; {{ scraped_info.lastUpdated }}</p>
+    </div> <!-- End of top panel-->
+    
+    <div class="row"> <!-- Start of Start of latest news row -->
+      <div class="media">
+        <div class="media-body">
+          <h2>Latest Mars News</h2>
+          <h4>{{ scraped_info.newsTitle }}</h4>
+          <p>{{ scraped_info.newsParagraph }}</p>
+        </div>
+      </div>
+    </div> <!-- End of latest news row -->
+
+    <div class="row"> <!-- Start of Image/Table row -->
+
+      <div class="col-md-8"> <!-- Start of 1st column -->
+        <h2>Featured Mars Image</h2>
+        <img src="{{ scraped_info.featuredImageUrl }}" alt="Featured Mars Image" class="img-responsive">
+      </div> <!-- End of 1st column -->
+
+      <div class="col-md-4"> <!-- Start of 2nd column -->
+        <div class="row">
+          <h2>Mars Facts</h2>
+          {{ scraped_info.factsTable | safe }}
+        </div>
+      </div> <!-- End of 2nd column-->
+
+    </div> <!-- End of Image/Table row -->
+
+    <div class="row"> <!-- Start of hemispheres row -->
+
+      <div class="page-header"> <!-- Banner accross top of images -->
+        <h2 class="text-center">Mars Hemispheres</h2>
+      </div>
+
+      <div class="col-md-3"> <!-- Start of 1st column -->
+        <div class="thumbnail">
+          <img src="{{ scraped_info.hemispheres[0].img_url }}" alt="Cerberus Hemisphere Image">
+          <div class="caption"><h3>{{ scraped_info.hemispheres[0].title }}</h3></div>
+        </div>
+      </div> <!-- End of 1st column -->
+
+      <div class="col-md-3"> <!-- Start of 2nd column -->
+        <div class="thumbnail">
+          <img src="{{ scraped_info.hemispheres[1].img_url }}" alt="Schiaparelli Hemisphere Image">
+          <div class="caption"><h3>{{ scraped_info.hemispheres[1].title }}</h3></div>
+        </div>
+      </div> <!-- End of 2nd column -->
+
+      <div class="col-md-3"> <!-- Start of 3rd column -->
+        <div class="thumbnail">
+          <img src="{{ scraped_info.hemispheres[2].img_url }}" alt="Syrtis Major Hemisphere Image">
+          <div class="caption"><h3>{{ scraped_info.hemispheres[2].title }}</h3></div>
+        </div>
+      </div> <!-- End of 3rd column -->
+
+      <div class="col-md-3"> <!-- Start of 4th column -->
+        <div class="thumbnail">
+          <img src="{{ scraped_info.hemispheres[3].img_url }}" alt="Valles Marineris Hemisphere Image">
+          <div class="caption"><h3>{{ scraped_info.hemispheres[3].title }}</h3></div>
+        </div>
+      </div> <!-- End of 4th column -->
+    
+    </div> <!-- End of hemispheres row -->
+    
+  </div> <!-- End of container -->
+  
+</body>
+
+</html>
