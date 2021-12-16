@@ -15,5 +15,5 @@
 + Prior to running "app.py", please open your browser to localhost:5000 and also open MongoDB. Also, you don't need to use Chrome, but you must have it installed.<br>
 
 #### Submitted by: <br>
- Ricardo G. Mora, Jr.  12/15/2021
+ Ricardo G. Mora, Jr.  12/16/2021
  
