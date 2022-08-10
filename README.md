@@ -11,16 +11,16 @@ To examine the code files, their locations are indicated in the tree below:
 #### Folders/Files:
 
 * **"Code"** (folder)
-   * **"static"** (folder) <br>
-      * *"marvin.jpg"* (start-up image used by the flask app) <br>
-   * **"templates"** (folder) <br>
-      * *"index.html"* (template used by the flask app) <br>
-   * *"app.py"* (flask app to demonstrate web scraping) <br>
-   * *"mission_to_mars.ipynb"* (jupyter notebook to explore web scraping) <br>
-   * *"scrape_mars.py"* (contains the web scraping function used by *"app.py"*) <br>
+  * **"static"** (folder) <br>
+    * *"marvin.jpg"* (start-up image used by the flask app) <br>
+  * **"templates"** (folder) <br>
+    * *"index.html"* (template used by the flask app) <br>
+  * *"app.py"* (flask app to demonstrate web scraping) <br>
+  * *"mission_to_mars.ipynb"* (jupyter notebook to explore web scraping) <br>
+  * *"scrape_mars.py"* (contains the web scraping function used by *"app.py"*) <br>
 * **"Images"** (folder) <br>
-   * *"Output_Before_Scraping.JPG"* (image of flask app output) <br>
-   * *"Output_After_Scraping.JPG"* (image of flask app output) <br>
+  * *"Output_Before_Scraping.JPG"* (image of flask app output) <br>
+  * *"Output_After_Scraping.JPG"* (image of flask app output) <br>
 
 #### Note: <br>
 
@@ -29,10 +29,10 @@ To examine the code files, their locations are indicated in the tree below:
 + Websites sometimes make changes that require re-writing the webscraping code.
 
 #### Websites Scraped:
-https://redplanetscience.com/ <br>
-https://spaceimages-mars.com/ <br>
-https://galaxyfacts-mars.com/ <br>
-https://marshemispheres.com/ <br>
+<a href="https://redplanetscience.com/"> https://redplanetscience.com/ </a> <br>
+<a href="https://spaceimages-mars.com/"> https://spaceimages-mars.com/ </a> <br>
+<a href="https://galaxyfacts-mars.com/"> https://galaxyfacts-mars.com/ </a> <br>
+<a href="https://marshemispheres.com/"> https://marshemispheres.com/ </a> <br>
 
 #### Flask Output Before Scraping:
 <img src="Images/Output_Before_Scraping.JPG"> <br>
